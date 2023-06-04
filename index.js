@@ -12,6 +12,12 @@ app.use("/user",userRouter)
 app.use("/contact",contactRouter)
 
 
+app.use(function(req,res,next){
+    res.header("Access-Control-Allow-Origin","*")
+})
+
+
+
 app.get("/",(req,res)=>{
 
     res.send({
